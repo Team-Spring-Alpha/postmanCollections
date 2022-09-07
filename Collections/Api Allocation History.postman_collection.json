@@ -7,43 +7,18 @@
 	},
 	"item": [
 		{
-			"name": "getByUser - Prod - Heroku",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "*/*"
-					}
-				],
-				"url": {
-					"raw": "https://movieallocationhistory.herokuapp.com/api/allocation-history/:userId",
-					"protocol": "https",
-					"host": [
-						"movieallocationhistory",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"api",
-						"allocation-history",
-						":userId"
-					],
-					"variable": [
-						{
-							"key": "userId",
-							"value": "do",
-							"description": "(Required) userId"
-						}
-					]
-				}
-			},
-			"response": [
+			"name": "Buscar Historico - Prod",
+			"item": [
 				{
-					"name": "OK",
-					"originalRequest": {
+					"name": "getByUser - Prod - Heroku",
+					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
 						"url": {
 							"raw": "https://movieallocationhistory.herokuapp.com/api/allocation-history/:userId",
 							"protocol": "https",
@@ -60,171 +35,206 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "6318a97ea60a040a0d802ad9"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "*/*"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "Not Found",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://movieallocationhistory.herokuapp.com/api/allocation-history/:userId",
-							"protocol": "https",
-							"host": [
-								"movieallocationhistory",
-								"herokuapp",
-								"com"
-							],
-							"path": [
-								"api",
-								"allocation-history",
-								":userId"
-							],
-							"variable": [
-								{
-									"key": "userId",
-									"value": "noId",
+									"value": "do",
 									"description": "(Required) userId"
 								}
 							]
 						}
 					},
-					"status": "Not Found",
-					"code": 404,
-					"_postman_previewlanguage": "text",
-					"header": [
+					"response": [
 						{
-							"key": "Content-Type",
-							"value": "text/plain"
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://movieallocationhistory.herokuapp.com/api/allocation-history/:userId",
+									"protocol": "https",
+									"host": [
+										"movieallocationhistory",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"allocation-history",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "6318a97ea60a040a0d802ad9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://movieallocationhistory.herokuapp.com/api/allocation-history/:userId",
+									"protocol": "https",
+									"host": [
+										"movieallocationhistory",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"allocation-history",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "noId",
+											"description": "(Required) userId"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
 						}
-					],
-					"cookie": [],
-					"body": ""
+					]
 				}
 			]
 		},
 		{
-			"name": "getByUser - Dev - Localhost Copy",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "*/*"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8082/api/allocation-history/:userId",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"api",
-						"allocation-history",
-						":userId"
-					],
-					"variable": [
+			"name": "Buscar Historico - Dev",
+			"item": [
+				{
+					"name": "getByUser - Dev - Localhost Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/api/allocation-history/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"allocation-history",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "do",
+									"description": "(Required) userId"
+								}
+							]
+						}
+					},
+					"response": [
 						{
-							"key": "userId",
-							"value": "do",
-							"description": "(Required) userId"
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/allocation-history/:userId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"allocation-history",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "6318a97ea60a040a0d802ad9",
+											"description": "(Required) userId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/allocation-history/:userId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"allocation-history",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "noId",
+											"description": "(Required) userId"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
 						}
 					]
-				}
-			},
-			"response": [
-				{
-					"name": "OK",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8082/api/allocation-history/:userId",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8082",
-							"path": [
-								"api",
-								"allocation-history",
-								":userId"
-							],
-							"variable": [
-								{
-									"key": "userId",
-									"value": "6318a97ea60a040a0d802ad9",
-									"description": "(Required) userId"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "*/*"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "Not Found",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8082/api/allocation-history/:userId",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8082",
-							"path": [
-								"api",
-								"allocation-history",
-								":userId"
-							],
-							"variable": [
-								{
-									"key": "userId",
-									"value": "noId",
-									"description": "(Required) userId"
-								}
-							]
-						}
-					},
-					"status": "Not Found",
-					"code": 404,
-					"_postman_previewlanguage": "text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "text/plain"
-						}
-					],
-					"cookie": [],
-					"body": ""
 				}
 			]
 		}

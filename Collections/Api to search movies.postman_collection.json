@@ -1,0 +1,788 @@
+{
+	"info": {
+		"_postman_id": "59d78b8d-fd7b-479e-949c-58d8f022fec7",
+		"name": "Api to search movies",
+		"description": "Api to search movies from The Movie DB\n\nContact Support:\n Name: Team Spring Beta\n Email: team.spring.compass.alpha@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buscar filmes - Prod",
+			"item": [
+				{
+					"name": "getMovieByFilters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://moviemanagerapi.herokuapp.com/api/movie-manager/movie-search",
+							"protocol": "https",
+							"host": [
+								"moviemanagerapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"movie-manager",
+								"movie-search"
+							],
+							"query": [
+								{
+									"key": "movie_genrer",
+									"value": "FAMILIA",
+									"description": "movie_genrer",
+									"disabled": true
+								},
+								{
+									"key": "movie_name",
+									"value": "bastardos inglorios",
+									"description": "movie_name",
+									"disabled": true
+								},
+								{
+									"key": "movie_peoples",
+									"value": "Keanu Reeves",
+									"description": "movie_peoples",
+									"disabled": true
+								},
+								{
+									"key": "movie_peoples",
+									"value": "sit",
+									"description": "movie_peoples",
+									"disabled": true
+								},
+								{
+									"key": "movie_provider",
+									"value": "TELECINE_PLAY",
+									"description": "movie_provider",
+									"disabled": true
+								},
+								{
+									"key": "release_date_after",
+									"value": "1950-12-17",
+									"description": "release_date_after",
+									"disabled": true
+								},
+								{
+									"key": "release_date_before",
+									"value": "2015-12-17",
+									"description": "release_date_before",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://moviemanagerapi.herokuapp.com/api/movie-manager/movie-search",
+									"protocol": "https",
+									"host": [
+										"moviemanagerapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"movie-manager",
+										"movie-search"
+									],
+									"query": [
+										{
+											"key": "movie_genrer",
+											"value": "FAMILIA",
+											"description": "movie_genrer",
+											"disabled": true
+										},
+										{
+											"key": "movie_name",
+											"value": "bastardos inglorios",
+											"description": "movie_name",
+											"disabled": true
+										},
+										{
+											"key": "movie_peoples",
+											"value": "Keanu Reeves",
+											"description": "movie_peoples",
+											"disabled": true
+										},
+										{
+											"key": "movie_peoples",
+											"value": "sit",
+											"description": "movie_peoples",
+											"disabled": true
+										},
+										{
+											"key": "movie_provider",
+											"value": "TELECINE_PLAY",
+											"description": "movie_provider",
+											"disabled": true
+										},
+										{
+											"key": "release_date_after",
+											"value": "1950-12-17",
+											"description": "release_date_after",
+											"disabled": true
+										},
+										{
+											"key": "release_date_before",
+											"value": "2015-12-17",
+											"description": "release_date_before",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "getMovieById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://moviemanagerapi.herokuapp.com/api/movie-manager/movie/:movieId",
+							"protocol": "https",
+							"host": [
+								"moviemanagerapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"movie-manager",
+								"movie",
+								":movieId"
+							],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "5",
+									"description": "(Required) movieId"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://moviemanagerapi.herokuapp.com/api/movie-manager/movie/:movieId",
+									"protocol": "https",
+									"host": [
+										"moviemanagerapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"movie-manager",
+										"movie",
+										":movieId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "5",
+											"description": "(Required) movieId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://moviemanagerapi.herokuapp.com/api/movie-manager/movie/:movieId",
+									"protocol": "https",
+									"host": [
+										"moviemanagerapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"movie-manager",
+										"movie",
+										":movieId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "-94277295",
+											"description": "(Required) movieId"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "getRecommendations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://moviemanagerapi.herokuapp.com/api/movie-manager/:id/recommendations",
+							"protocol": "https",
+							"host": [
+								"moviemanagerapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"movie-manager",
+								":id",
+								"recommendations"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://moviemanagerapi.herokuapp.com/api/movie-manager/:id/recommendations",
+									"protocol": "https",
+									"host": [
+										"moviemanagerapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"movie-manager",
+										":id",
+										"recommendations"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://moviemanagerapi.herokuapp.com/api/movie-manager/:id/recommendations",
+									"protocol": "https",
+									"host": [
+										"moviemanagerapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"movie-manager",
+										":id",
+										"recommendations"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-94277295",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Buscar filmes - Dev",
+			"item": [
+				{
+					"name": "getMovieByFilters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/movie-manager/movie-search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie-manager",
+								"movie-search"
+							],
+							"query": [
+								{
+									"key": "movie_genrer",
+									"value": "FAMILIA",
+									"description": "movie_genrer",
+									"disabled": true
+								},
+								{
+									"key": "movie_name",
+									"value": "bastardos inglorios",
+									"description": "movie_name",
+									"disabled": true
+								},
+								{
+									"key": "movie_peoples",
+									"value": "Keanu Reeves",
+									"description": "movie_peoples",
+									"disabled": true
+								},
+								{
+									"key": "movie_peoples",
+									"value": "sit",
+									"description": "movie_peoples",
+									"disabled": true
+								},
+								{
+									"key": "movie_provider",
+									"value": "TELECINE_PLAY",
+									"description": "movie_provider",
+									"disabled": true
+								},
+								{
+									"key": "release_date_after",
+									"value": "1950-12-17",
+									"description": "release_date_after",
+									"disabled": true
+								},
+								{
+									"key": "release_date_before",
+									"value": "2015-12-17",
+									"description": "release_date_before",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/api/movie-manager/movie-search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie-manager",
+										"movie-search"
+									],
+									"query": [
+										{
+											"key": "movie_genrer",
+											"value": "FAMILIA",
+											"description": "movie_genrer",
+											"disabled": true
+										},
+										{
+											"key": "movie_name",
+											"value": "bastardos inglorios",
+											"description": "movie_name",
+											"disabled": true
+										},
+										{
+											"key": "movie_peoples",
+											"value": "Keanu Reeves",
+											"description": "movie_peoples",
+											"disabled": true
+										},
+										{
+											"key": "movie_peoples",
+											"value": "sit",
+											"description": "movie_peoples",
+											"disabled": true
+										},
+										{
+											"key": "movie_provider",
+											"value": "TELECINE_PLAY",
+											"description": "movie_provider",
+											"disabled": true
+										},
+										{
+											"key": "release_date_after",
+											"value": "1950-12-17",
+											"description": "release_date_after",
+											"disabled": true
+										},
+										{
+											"key": "release_date_before",
+											"value": "2015-12-17",
+											"description": "release_date_before",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "getMovieById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/movie-manager/movie/:movieId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie-manager",
+								"movie",
+								":movieId"
+							],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "5",
+									"description": "(Required) movieId"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/movie-manager/movie/:movieId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie-manager",
+										"movie",
+										":movieId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "5",
+											"description": "(Required) movieId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/movie-manager/movie/:movieId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie-manager",
+										"movie",
+										":movieId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "-94277295",
+											"description": "(Required) movieId"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "getRecommendations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/movie-manager/:id/recommendations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie-manager",
+								":id",
+								"recommendations"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/movie-manager/:id/recommendations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie-manager",
+										":id",
+										"recommendations"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/movie-manager/:id/recommendations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie-manager",
+										":id",
+										"recommendations"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-94277295",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
