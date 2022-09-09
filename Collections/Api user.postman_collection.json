@@ -15,18 +15,28 @@
 						{
 							"name": "refreshToken",
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "PUT",
 								"header": [
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+										"type": "default"
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/api/auth/refresh/:username",
+									"raw": "http://localhost:8080/api/auth/refresh/:username",
+									"protocol": "http",
 									"host": [
-										"{{baseUrl}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
 										"api",
 										"auth",
@@ -35,9 +45,8 @@
 									],
 									"variable": [
 										{
-											"key": "email",
-											"value": "amet in",
-											"description": "(Required) email"
+											"key": "username",
+											"value": "teste@gmail.com"
 										}
 									]
 								}
@@ -49,16 +58,22 @@
 										"method": "PUT",
 										"header": [
 											{
-												"description": "(Required) Authorization",
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
 												"key": "Authorization",
-												"value": "amet in"
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+												"type": "default"
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/auth/refresh/:username",
+											"raw": "http://localhost:8080/api/auth/refresh/:username",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
 												"api",
 												"auth",
@@ -67,41 +82,40 @@
 											],
 											"variable": [
 												{
-													"key": "email",
-													"value": "amet in",
-													"description": "(Required) email"
+													"key": "username",
+													"value": "teste@gmail.com"
 												}
 											]
 										}
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "*/*"
-										}
-									],
+									"_postman_previewlanguage": null,
+									"header": null,
 									"cookie": [],
-									"body": ""
+									"body": null
 								},
 								{
-									"name": "Created",
+									"name": "Bad Request",
 									"originalRequest": {
 										"method": "PUT",
 										"header": [
 											{
-												"description": "(Required) Authorization",
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
 												"key": "Authorization",
-												"value": "amet in"
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+												"type": "default",
+												"disabled": true
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/auth/refresh/:username",
+											"raw": "http://localhost:8080/api/auth/refresh/:username",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
 												"api",
 												"auth",
@@ -110,24 +124,16 @@
 											],
 											"variable": [
 												{
-													"key": "email",
-													"value": "amet in",
-													"description": "(Required) email"
+													"key": "username",
+													"value": "teste@gmail.com"
 												}
 											]
 										}
 									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
+									"_postman_previewlanguage": null,
+									"header": null,
 									"cookie": [],
-									"body": ""
+									"body": null
 								},
 								{
 									"name": "Unauthorized",
@@ -135,59 +141,22 @@
 										"method": "PUT",
 										"header": [
 											{
-												"description": "(Required) Authorization",
-												"key": "Authorization",
-												"value": "amet in"
-											}
-										],
-										"url": {
-											"raw": "{{baseUrl}}/api/auth/refresh/:username",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"auth",
-												"refresh",
-												":username"
-											],
-											"variable": [
-												{
-													"key": "email",
-													"value": "amet in",
-													"description": "(Required) email"
-												}
-											]
-										}
-									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
-									"cookie": [],
-									"body": ""
-								},
-								{
-									"name": "Forbidden",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [
+												"key": "Accept",
+												"value": "*/*"
+											},
 											{
-												"description": "(Required) Authorization",
 												"key": "Authorization",
-												"value": "amet in"
+												"value": "yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+												"type": "default"
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/auth/refresh/:username",
+											"raw": "http://localhost:8080/api/auth/refresh/:username",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
 												"api",
 												"auth",
@@ -196,24 +165,16 @@
 											],
 											"variable": [
 												{
-													"key": "email",
-													"value": "amet in",
-													"description": "(Required) email"
+													"key": "username",
+													"value": "teste@gmail.com"
 												}
 											]
 										}
 									},
-									"status": "Forbidden",
-									"code": 403,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
+									"_postman_previewlanguage": null,
+									"header": null,
 									"cookie": [],
-									"body": ""
+									"body": null
 								},
 								{
 									"name": "Not Found",
@@ -221,16 +182,22 @@
 										"method": "PUT",
 										"header": [
 											{
-												"description": "(Required) Authorization",
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
 												"key": "Authorization",
-												"value": "amet in"
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+												"type": "default"
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/auth/refresh/:username",
+											"raw": "http://localhost:8080/api/auth/refresh/:username",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
 												"api",
 												"auth",
@@ -239,30 +206,25 @@
 											],
 											"variable": [
 												{
-													"key": "email",
-													"value": "amet in",
-													"description": "(Required) email"
+													"key": "username",
+													"value": "teste@gmail"
 												}
 											]
 										}
 									},
-									"status": "Not Found",
-									"code": 404,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain"
-										}
-									],
+									"_postman_previewlanguage": null,
+									"header": null,
 									"cookie": [],
-									"body": ""
+									"body": null
 								}
 							]
 						},
 						{
 							"name": "signin",
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -276,7 +238,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"email\": \"teste@gmail.com\",\n  \"password\": \"123\"\n}",
+									"raw": "{\n    \"email\": \"teste@gmail.com\",\n    \"password\": \"123\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -337,6 +299,48 @@
 									],
 									"cookie": [],
 									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"teste@gmail.com\",\n    \"password\": \"abc\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/auth/signin",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"auth",
+												"signin"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
 								}
 							]
 						}
@@ -1011,7 +1015,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"user_is_blocked\": false\n}",
+									"raw": "{\n  \"user_is_blocked\": true\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1154,7 +1158,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjE2NjI2MDcxMDcsImlhdCI6MTY2MjYwMzUwN30.hX9BnpOhivZAt_iOXOX4aLQvbSYSylAQ1_Gf4HWhYVg",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjE2NjI2OTI5NTUsImlhdCI6MTY2MjY4OTM1NX0.-qWl9csZsNyM3szTRUDX9pxlz5bJS1k_USuJOTTg9HU",
 											"type": "string"
 										}
 									]
@@ -1172,7 +1176,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies\": {\n    \"buy\": [\n      16869,\n      5\n    ],\n    \"rent\": [\n      16869,\n      5\n    ]\n  },\n  \"user_id\": \"631949637305d75b7131f550\"\n}",
+									"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies_buy\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Apple iTunes\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n  ],\n  \"movies_rent\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Claro video\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1194,7 +1198,7 @@
 							},
 							"response": [
 								{
-									"name": "Forbidden",
+									"name": "OK",
 									"originalRequest": {
 										"method": "POST",
 										"header": [
@@ -1209,7 +1213,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies\": {\n    \"buy\": [\n      16869,\n      5\n    ],\n    \"rent\": [\n      16869,\n      5\n    ]\n  },\n  \"user_id\": \"631949637305d75b7131f550\"\n}",
+											"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies_buy\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Apple iTunes\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n  ],\n  \"movies_rent\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Claro video\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1235,7 +1239,7 @@
 									"body": null
 								},
 								{
-									"name": "OK",
+									"name": "Not Found",
 									"originalRequest": {
 										"method": "POST",
 										"header": [
@@ -1250,7 +1254,48 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies\": {\n    \"buy\": [\n      16869,\n      5\n    ],\n    \"rent\": [\n      16869,\n      5\n    ]\n  },\n  \"user_id\": \"631949637305d75b7131f550\"\n}",
+											"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies_buy\": [\n      {\n          \"id\": 16869,\n          \"store\": \"AppleiTunes\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n  ],\n  \"movies_rent\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Claro video\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/movie-payment",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"movie-payment"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"credit_card_number\": \"543512900882090\",\n  \"movies_buy\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Apple iTunes\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n  ],\n  \"movies_rent\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Claro video\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1302,7 +1347,7 @@
 									"variable": [
 										{
 											"key": "userId",
-											"value": "6318a97ea60a040a0d802ad9"
+											"value": "631949637305d75b7131f550"
 										}
 									]
 								}
@@ -1350,6 +1395,1455 @@
 												"localhost"
 											],
 											"port": "8080",
+											"path": [
+												"api",
+												"allocation-history",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "-1"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Prod",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "refreshToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/auth/refresh/:username",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"refresh",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "teste@gmail.com"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+												"type": "default"
+											}
+										],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/auth/refresh/:username",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"auth",
+												"refresh",
+												":username"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "teste@gmail.com"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+												"type": "default",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/auth/refresh/:username",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"auth",
+												"refresh",
+												":username"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "teste@gmail.com"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+												"type": "default"
+											}
+										],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/auth/refresh/:username",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"auth",
+												"refresh",
+												":username"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "teste@gmail.com"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJleHAiOjE2NjI2OTE3MDIsImlhdCI6MTY2MjY4MDkwMn0.n6cSuL1Slo0dCejNMu7qKTlJrUSKBDxWPGK08U8RG4g",
+												"type": "default"
+											}
+										],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/auth/refresh/:username",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"auth",
+												"refresh",
+												":username"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "teste@gmail"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "signin",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"teste@gmail.com\",\n    \"password\": \"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/auth/signin",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"teste@gmail.com\",\n  \"password\": \"123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/auth/signin",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"auth",
+												"signin"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"teste@gmail.com\",\n    \"password\": \"abc\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/auth/signin",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"auth",
+												"signin"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "movie-manager",
+					"item": [
+						{
+							"name": "getRecommendations",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/movie-manager/:id/recommendations",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"movie-manager",
+										":id",
+										"recommendations"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/movie-manager/:id/recommendations",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"movie-manager",
+												":id",
+												"recommendations"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/movie-manager/:id/recommendations",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"movie-manager",
+												":id",
+												"recommendations"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-5"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getMovieByFilters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/movie-manager/movie-search",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"movie-manager",
+										"movie-search"
+									],
+									"query": [
+										{
+											"key": "movie_genrer",
+											"value": "ACAO",
+											"disabled": true
+										},
+										{
+											"key": "release_date_after",
+											"value": "2020-10-10",
+											"disabled": true
+										},
+										{
+											"key": "release_date_before",
+											"value": "2000-10-10",
+											"disabled": true
+										},
+										{
+											"key": "movie_provider",
+											"value": "NETFLIX",
+											"disabled": true
+										},
+										{
+											"key": "movie_name",
+											"value": "Bastardos Inglorios",
+											"disabled": true
+										},
+										{
+											"key": "movie_peoples",
+											"value": "Keanu Reeves",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/movie-manager/movie-search",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"movie-manager",
+												"movie-search"
+											],
+											"query": [
+												{
+													"key": "movie_genrer",
+													"value": "ACAO",
+													"disabled": true
+												},
+												{
+													"key": "release_date_after",
+													"value": "2020-10-10",
+													"disabled": true
+												},
+												{
+													"key": "release_date_before",
+													"value": "2000-10-10",
+													"disabled": true
+												},
+												{
+													"key": "movie_provider",
+													"value": "NETFLIX",
+													"disabled": true
+												},
+												{
+													"key": "movie_name",
+													"value": "Bastardos Inglorios",
+													"disabled": true
+												},
+												{
+													"key": "movie_peoples",
+													"value": "Keanu Reeves",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "post - criar usuario",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"birth_date\": \"27/10/2020\",\n  \"category\": [\n    \"ACAO\",\n    \"AVENTURA\"\n  ],\n  \"cpf\": \"727.784.520-01\",\n  \"email\": \"teste@teste.com.br\",\n  \"name\": \"Jetosvaldo\",\n  \"password\": \"123\",\n  \"cards\": [\n    {\n      \"brand\": \"MASTERCARD\",\n      \"holder_name\": \"Jetosvaldo\",\n      \"month_expiration\": \"12\",\n      \"number\": \"5435129008820905\",\n      \"security_code\": \"013\",\n      \"year_expiration\": \"2024\"\n    },\n    {\n      \"brand\": \"VISA\",\n      \"holder_name\": \"Jetosvaldo\",\n      \"month_expiration\": \"8\",\n      \"number\": \"4539831867999724\",\n      \"security_code\": \"666\",\n      \"year_expiration\": \"2025\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/user",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"birth_date\": \"27/10/2020\",\n  \"category\": [\n    \"ACAO\",\n    \"AVENTURA\"\n  ],\n  \"cpf\": \"727.784.520-01\",\n  \"email\": \"teste@teste.com.br\",\n  \"name\": \"Jetosvaldo\",\n  \"password\": \"123\",\n  \"cards\": [\n    {\n      \"brand\": \"MASTERCARD\",\n      \"holder_name\": \"Jetosvaldo\",\n      \"month_expiration\": \"12\",\n      \"number\": \"5435129008820905\",\n      \"security_code\": \"013\",\n      \"year_expiration\": \"2024\"\n    },\n    {\n      \"brand\": \"VISA\",\n      \"holder_name\": \"Jetosvaldo\",\n      \"month_expiration\": \"8\",\n      \"number\": \"4539831867999724\",\n      \"security_code\": \"666\",\n      \"year_expiration\": \"2025\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"birth_date\": \"30/02/2015\",\n  \"category\": [\n    \"ANIMACAO\",\n    \"TESTE\"\n  ],\n  \"cpf\": \"111.111.111-01\",\n  \"email\": \"email\",\n  \"name\": \"Jetosvaldo55\",\n  \"password\": \"0123\",\n  \"cards\": [\n    {\n      \"brand\": \"MARCA\",\n      \"holder_name\": \"Jetosvaldo55\",\n      \"month_expiration\": \"01\",\n      \"number\": \"0000111122223333\",\n      \"security_code\": \"xxx\",\n      \"year_expiration\": \"2030\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "returnAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/user",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "findByUserId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/user/:userId",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "631949637305d75b7131f550",
+											"description": "(Required) userId"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user/:userId",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "631949637305d75b7131f550",
+													"description": "(Required) userId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user/:userId",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "-1",
+													"description": "(Required) userId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "patch User",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"birth_date\": \"15/02/2005\",\n  \"email\": \"teste@gmail.com\",\n  \"name\": \"Jetosvaldo Da Silva\",\n  \"password\": \"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/user/:id",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "631949637305d75b7131f550",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"birth_date\": \"1969-12-18\",\n  \"email\": \"Excepteur\",\n  \"name\": \"MDevdiCKrbR\",\n  \"password\": \"dolore anim eu et tempor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user/:id",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "631949637305d75b7131f550",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"birth_date\": \"15/02/2005\",\n  \"email\": \"teste@gmail.com\",\n  \"name\": \"Jetosvaldo Da Silva\",\n  \"password\": \"123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user/:id",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-1",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Patch user status Account",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_is_blocked\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/user/account/:id",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"account",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "631949637305d75b7131f550",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"user_is_blocked\": false\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user/account/:id",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user",
+												"account",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "631949637305d75b7131f550",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"user_is_blocked\": false\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/user/account/:id",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"user",
+												"account",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-1",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "movie-payment",
+					"item": [
+						{
+							"name": "post - pedido pra alocar filme",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJyb2xlcyI6WyJbUk9MRV9VU0VSXSJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjE2NjI2OTI5NTUsImlhdCI6MTY2MjY4OTM1NX0.-qWl9csZsNyM3szTRUDX9pxlz5bJS1k_USuJOTTg9HU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies_buy\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Apple iTunes\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n  ],\n  \"movies_rent\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Claro video\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/movie-payment",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"movie-payment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies_buy\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Apple iTunes\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n  ],\n  \"movies_rent\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Claro video\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/movie-payment",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"movie-payment"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"credit_card_number\": \"5435129008820905\",\n  \"movies_buy\": [\n      {\n          \"id\": 16869,\n          \"store\": \"AppleiTunes\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n  ],\n  \"movies_rent\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Claro video\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/movie-payment",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"movie-payment"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"credit_card_number\": \"543512900882090\",\n  \"movies_buy\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Apple iTunes\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n  ],\n  \"movies_rent\": [\n      {\n          \"id\": 16869,\n          \"store\": \"Claro video\"\n      },\n      {\n          \"id\": 5,\n          \"store\": \"Microsoft Store\"\n      }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/movie-payment",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"movie-payment"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "allocation-history",
+					"item": [
+						{
+							"name": "get - allocation history from user Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://userapollo70.herokuapp.com/api/allocation-history/:userId",
+									"protocol": "https",
+									"host": [
+										"userapollo70",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"allocation-history",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "631949637305d75b7131f550"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/allocation-history/:userId",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"allocation-history",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "6318a97ea60a040a0d802ad9"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://userapollo70.herokuapp.com/api/allocation-history/:userId",
+											"protocol": "https",
+											"host": [
+												"userapollo70",
+												"herokuapp",
+												"com"
+											],
 											"path": [
 												"api",
 												"allocation-history",
